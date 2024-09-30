@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1727672611152,
+      "tag": "0000_chunky_metal_master",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1727675344966,
+      "tag": "0001_aromatic_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727675758749,
+      "tag": "0002_outstanding_jimmy_woo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1727677359933,
+      "tag": "0003_spooky_whiplash",
+      "breakpoints": true
+    }
+  ]
+}
