@@ -17,8 +17,8 @@ export const sendEmailVerificationEmail = async (email: string, token: string) =
 		const {data, error} = await resend.emails.send({
 			from: "onboarding@resend.dev",
 			to: email,
-			subject: "Tree Center - Verify your email",
-			html: `<p>Click <a href="${verificationLink}">here</a> to verify your email and continue!</p>`
+			subject: "Tree Center - Подтверждите свою электронную почту",
+			html: `<p>Перейдите по данной <a href="${verificationLink}">ссылке</a> чтобы завершить регистрацию!</p>`
 		});
 
 		if (error) {

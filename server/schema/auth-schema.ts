@@ -3,35 +3,35 @@ import {z} from "zod";
 export const loginSchema = z.object({
 	email: z
 		.string()
-		.email("Please provide correct email address."),
+		.email("Введите корректную электронную почту."),
 	password: z
 		.string()
-		.min(1, "Please enter your password."),
+		.min(1, "Введите свой пароль."),
 	twoFactor: z
 		.optional(z
 			.number()
-			.gte(100000, "Please enter correct 2FA code.")
-			.lte(999999, "Please enter correct 2FA code.")
+			.gte(100000, "Введите корректный код подтверждения.")
+			.lte(999999, "Введите корректный код подтверждения.")
 		)
 })
 
 export const registerSchema = z.object({
 	firstName: z
 		.string()
-		.min(2, "Please provide correct first name. It should contain more than 2 letters."),
+		.min(2, "Введите свое имя."),
 	lastName: z
 		.string()
-		.min(2, "Please provide correct last name. It should contain more than 2 letters."),
+		.min(2, "Введите свою фамилию."),
 	email: z
 		.string()
-		.email("Please provide correct email address."),
+		.email("Введите корректную электронную почту."),
 	password: z
 		.string()
-		.min(8, "Password should contain more than 8 letters."),
+		.min(8, "Пароль должен состоять из более 8 символов."),
 	passwordConfirmation: z
 		.string()
-		.min(1, "Please enter your password confirmation.")
+		.min(1, "Подтвердите свой пароль.")
 }).refine(({password, passwordConfirmation}) => password === passwordConfirmation, {
-	message: "Password confirmation do not match the password.",
+	message: "Пароли не совпадают.",
 	path: ["passwordConfirmation"],
 });

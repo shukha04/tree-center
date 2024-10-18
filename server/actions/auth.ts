@@ -21,10 +21,10 @@ export const credentialsRegister = createSafeActionClient()
 					await sendEmailVerificationEmail(emailVerificationToken.email, emailVerificationToken.token);
 
 					return {
-						message: `Verification email sent to ${email}`
+						message: `Подтверждение электронной почты отправлено по адресу ${email}`
 					}
 				}
-				throw new Error("This email is already registered.");
+				throw new Error("Данная электронная почта уже зарегистрирована.");
 			}
 
 			const hashedPassword = await bcrypt.hash(password, 10);
@@ -39,7 +39,7 @@ export const credentialsRegister = createSafeActionClient()
 			await sendEmailVerificationEmail(emailVerificationToken.email, emailVerificationToken.token);
 
 			return {
-				message: `Verification email sent to ${email}`
+				message: `Подтверждение электронной почты отправлено по адресу ${email}`
 			}
 		} catch (error: any) {
 			return new Error(error);
@@ -53,6 +53,6 @@ export const credentialsLogin = createSafeActionClient()
 			where: eq(users.email, email)
 		});
 		if (!existingUser || !existingUser.email) {
-			throw new Error("Could not find the user.");
+			throw new Error("Пользователь не найден.");
 		}
 	});

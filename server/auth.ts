@@ -31,7 +31,7 @@ export const {handlers, auth, signIn, signOut} = NextAuth({
 					});
 
 					if (!existingUser || !existingUser.password) {
-						throw new Error("Could not find the user.");
+						throw new Error("User not found.");
 					}
 
 					const matchingPassword = await bcrypt.compare(password, existingUser.password);

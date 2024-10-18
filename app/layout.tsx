@@ -1,21 +1,9 @@
-import ThemeProvider from "@/components/theme-provider";
-import {cn} from "@/lib/utils";
+import Navbar from "@/components/navigation/navbar";
+import ThemeProvider from "@/components/providers/theme-provider";
 import type {Metadata} from "next";
 import "./globals.css";
-import {Playfair_Display, Roboto} from "next/font/google";
 
 type RootLayoutProps = Readonly<{children: React.ReactNode}>;
-
-const playfairDisplay = Playfair_Display({
-	subsets: ["cyrillic", "latin"],
-	variable: "--playfair-display"
-});
-
-const roboto = Roboto({
-	weight: ["400", "500"],
-	subsets: ["cyrillic", "latin"],
-	variable: "--roboto"
-});
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -24,10 +12,13 @@ export const metadata: Metadata = {
 
 function RootLayout({children}: RootLayoutProps) {
 	return (
-		<html lang="en" className={cn(playfairDisplay.variable)} suppressHydrationWarning>
-			<body className={roboto.className}>
+		<html lang="ru" suppressHydrationWarning>
+			<body>
 				<ThemeProvider>
-					{children}
+					<Navbar />
+					<main>
+						{children}
+					</main>
 				</ThemeProvider>
 			</body>
 		</html>
