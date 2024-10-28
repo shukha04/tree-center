@@ -5,34 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db63ef36-72eb-4583-b15a-151f5bd0c1e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/auth/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/navigation/motion-nav-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/navigation/navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(app-layout)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(app-layout)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(empty-layout)/auth/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(empty-layout)/auth/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(empty-layout)/auth/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(empty-layout)/auth/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(empty-layout)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/auth/auth-form-wrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/auth/register-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/actions/client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/register/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/login/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(empty-layout)/auth/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/form/login-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/form/register-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/providers/theme-provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/label.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/actions/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/actions/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/actions/email.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/actions/email.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db/migrations/meta/_journal.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/migrations/meta/_journal.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/schema/auth-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema/auth-schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +85,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(app-layout)" />
+      <recent name="$PROJECT_DIR$/app/(empty-layout)" />
       <recent name="$PROJECT_DIR$/components/navigation" />
       <recent name="$PROJECT_DIR$/components/providers" />
       <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/components/form" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -117,7 +112,7 @@
       <workItem from="1727550047015" duration="65522000" />
       <workItem from="1728073140048" duration="591000" />
       <workItem from="1728074688284" duration="31248000" />
-      <workItem from="1729276544610" duration="11066000" />
+      <workItem from="1729276544610" duration="82686000" />
     </task>
     <servers />
   </component>

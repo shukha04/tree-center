@@ -1,6 +1,6 @@
 import {z} from "zod";
 
-export const loginSchema = z.object({
+export const LoginSchema = z.object({
 	email: z
 		.string()
 		.email("Введите корректную электронную почту."),
@@ -13,9 +13,9 @@ export const loginSchema = z.object({
 			.gte(100000, "Введите корректный код подтверждения.")
 			.lte(999999, "Введите корректный код подтверждения.")
 		)
-})
+});
 
-export const registerSchema = z.object({
+export const RegisterSchema = z.object({
 	firstName: z
 		.string()
 		.min(2, "Введите свое имя."),
@@ -31,7 +31,29 @@ export const registerSchema = z.object({
 	passwordConfirmation: z
 		.string()
 		.min(1, "Подтвердите свой пароль.")
-}).refine(({password, passwordConfirmation}) => password === passwordConfirmation, {
-	message: "Пароли не совпадают.",
-	path: ["passwordConfirmation"],
+}).refine(({password}) => {
+		let score = 0;
+		// Contains lowercase
+		if (/[a-z]/.test(password)) score += 1;
+		// Contains uppercase
+		if (/[A-Z]/.test(password)) score += 1;
+		// Contains numbers
+		if (/\d/.test(password)) score += 1;
+		// Contains special characters
+		if (/[^A-Za-z0-9]/.test(password)) score += 1;
+
+		return score > 2;
+	}, {
+		message: "Пароль слишком слабый.",
+		path: ["password"]
+	})
+	.refine(({password, passwordConfirmation}) => password === passwordConfirmation, {
+		message: "Пароли не совпадают.",
+		path: ["passwordConfirmation"]
+	});
+
+export const CheckExistingEmailSchema = z.object({
+	email: z
+		.string()
+		.email("Введите корректную электронную почту.")
 });

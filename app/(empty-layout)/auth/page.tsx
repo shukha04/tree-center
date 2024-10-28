@@ -5,9 +5,9 @@ async function AuthPage() {
 	const session = await auth();
 
 	if (!session) {
-		redirect("/auth/login")
+		redirect("/auth/login");
 	} else {
-		redirect("/dashboard")
+		redirect("/dashboard");
 	}
 }
 

@@ -76,4 +76,7 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  input[aria-invalid="true"]:not(:focus-visible) {
+    @apply ring-1 ring-destructive border-transparent !important;
+  }
 }
